@@ -89,7 +89,6 @@
 
 #home {
     padding: 70px 10px;
-    max-width: 1200PX ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,7 +175,6 @@
 
 #info{
   padding: 70px 0;
-  max-width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -237,5 +235,5 @@
   align-items: center;
   font-size: 12px;
   font-weight: 300;
-  padding: 0 100px;
+  padding: 0 150px;
 }
