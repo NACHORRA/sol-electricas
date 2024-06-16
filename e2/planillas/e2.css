@@ -2,12 +2,11 @@
   background: linear-gradient(to top, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
 }
 
-* {
-    margin: 0;
-    padding: 0;
+*{
+  margin: 0;
+  padding: 0;
     border: none;
     box-sizing: border-box;
-
 }
 #main_header {
     background: #5c5f70;
@@ -20,7 +19,7 @@
     gap: 1rem;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1000;
 }
 
@@ -80,7 +79,14 @@
     object-fit: contain;
 }
 
-#main {
+@media (max-width: 1200px) {
+  #main_header {
+    justify-content: space-between;
+  }
+
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,23 +95,31 @@
   }
 
 #home {
-    padding: 70px 10px;
+    padding: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
   }
 
+  #info{
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 80px;
+  }
+
 .home-info {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
+    width: 100%;
   }
 
 .home-info h1 {
     font-size: 50px;
-    width: 80%;
     font-weight: 100;
   }
   
@@ -117,12 +131,10 @@
     text-align: center;
   }
 
-  
 
 .home-card {
     width: 440px;
     padding: 20px;
-    border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -137,6 +149,26 @@
   transition-property: all;
   transition-duration: 1s;
   width: 450px;
+}
+
+
+@media (max-width: 1200px) {
+  .home-card {
+    display: none;
+  }
+  #home {
+    align-items: center;
+    width: (100%-3rem);
+  }
+  .home-info h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .home-info p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
 }
 
 .loader {
@@ -175,17 +207,18 @@
   }
 
 #info{
-  padding: 70px 0;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
 }
 
 #info h2 {
   font-size: 32px;
   font-weight: 800;
+  right: 40px;
 }
 
 .info-servicios-container {
@@ -228,14 +261,15 @@
   font-weight: 300;
 }
 
+
+
 #products {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 70px 0;
   max-width: 1200px;
-  width: 100%;
 }
 
 .products-info h2{
@@ -254,12 +288,19 @@
   align-items: center;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .category {
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
+  background-color: #5c5f70;
+  transition: color 0.3s;  
+}
+
+.category:hover {
+  color: rgb(216, 216, 216);
 }
 
 
@@ -272,6 +313,8 @@
   padding: 10px;
   max-width: 1200px;
 }
+
+
 
 .product {
   background-color: #5c5f70;
@@ -314,14 +357,86 @@
   justify-content: space-between;
   align-items: center;}
 
+.product-down button{
+  background-color: transparent;
+  transition: color 0.3s;
+}
+
+
+.product-down button:hover {
+  color: rgb(216, 216, 216);
+}
+
+@media (max-width: 1200px) {
+  #products {
+    max-width: none;
+  }
+  .product-container{
+    width: calc(100% / 2 + 5rem);
+    justify-content: center;
+    align-items: start;
+  }
+  .products-info{
+    width: calc(100% / 2 + 5rem);
+    justify-content: center;
+    align-items: start;
+  }
+  .product {
+    width: calc(100%);
+  }
+}
 
 #about{
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   align-items: center;
   font-size: 12px;
   font-weight: 300;
-  padding: 0 150px;
+  padding: 0px 60px;
 }
+
+@media (max-width: 1200px) {
+  #about {
+    align-items: center;
+    width: 500px;
+  }
+  #about p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .home-info p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+footer{
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #5c5f70;
+  padding: 20px 0;
+}
+
+footer nav{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-decoration: none;
+}
+
+footer nav a{
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+footer nav a:hover {
+  color: rgb(216, 216, 216);
+}
+
+
+
