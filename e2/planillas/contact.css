@@ -12,7 +12,7 @@
     background: #5c5f70;
     position: fixed;
     height: 5vh;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
     align-items: center;
     display: flex;
     align-items: center;
@@ -75,14 +75,27 @@
 }
 
 #main_header form button img {
-    height: 30px;
+    height: 2rem;
     object-fit: contain;
 }
 
 @media (max-width: 1200px) {
   #main_header {
     justify-content: space-between;
-  }}
+  }
+  #main_header nav a {
+    font-size: 2rem;
+  }
+
+@media (max-width: 600px) {
+    #main_header {
+      justify-content: space-between;
+    }
+    #main_header nav a {
+      font-size: 1rem;
+    }}
+
+}
 
 main {
     display: flex;
@@ -122,10 +135,6 @@ main {
   gap: 10px;
 }
 
-.lista li p{
-  
-}
-
 
 .home-card {
     padding: 5px 20px;
@@ -137,22 +146,69 @@ main {
   }
 
   @media (max-width: 1200px) {
+
     .home-card {
-      display: none;
+        display: none;
+    }
+    main{
+      padding: 0rem 0rem 15rem 0rem;
     }
     #home {
       align-items: center;
-      width: (100%-3rem);
+      width: (100%);
     }
-    .home-info h1 {
+    #titulo h2 {
+      left: 20rem;
       text-align: center;
-      font-size: 3rem;
+      font-size: 5rem;
     }
-    .home-info p {
+    .lista  {
+      padding: 10px 10px 10px 30px;
+    }
+    .lista h4  {
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 2rem;
     }
-  
+    .lista ul li p  {
+      text-align: center;
+      font-size: 2rem;
+    }
+    .lista ul li img {
+      height: 2rem ;
+      width: 2rem;
+    }
+  }
+    @media (max-width: 600px) {
+      main{
+        padding: 0rem 0rem 0rem 0rem;
+      }
+      .home-card {
+        display: none;
+      }
+      #home {
+        align-items: center;
+        width: (100%);
+      }
+      #titulo h2 {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .lista h4  {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .lista ul li p  {
+        text-align: center;
+        font-size: 1rem;
+      }
+      .lista ul li img {
+        height: 1.5rem ;
+        width: 1.5rem;
+      }
+      .lista  {
+        padding: 0px;
+      }
+
   }
 
 
@@ -191,6 +247,7 @@ main {
   @keyframes l8 {
     to {transform:perspective(300px) translateZ(180px);opacity:0}
   }
+
   
 
 
