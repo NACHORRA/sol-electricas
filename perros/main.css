@@ -113,7 +113,8 @@ body:has(.side-menu:checked) {
 overflow: hidden;
 }
 
-@media (min-width: 768px) {
+
+@media (min-width: 1200px) {
   .nav{
       max-height: none;
       top: 0;
@@ -135,6 +136,11 @@ overflow: hidden;
   }
 }
 
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -147,11 +153,14 @@ main {
 #home{
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-wrap: wrap;
   gap: 5px;
 }
+
+
 
 #home h1 {
   font-size: 70px;
@@ -186,6 +195,7 @@ main {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  align-items: center;
   text-align: center;
   margin-bottom: 20px;
   width: 30rem;
@@ -193,6 +203,8 @@ main {
   transition-property: all;
   transition-duration: 1s;
 }
+
+
 
 .home-picture:hover {
   transition-property: all;
@@ -220,6 +232,7 @@ main {
   transition: color 0.3s;
 }
 
+
 .home-picture nav a:hover {
   background-color: transparent;
   color: var(--gray);
@@ -229,6 +242,70 @@ main {
   font-size: 14px;
   font-weight: 300;
 }
+
+@media (max-width: 1200px) {
+  #home{
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 90px;
+  }
+  #home h5 {
+    font-size: 40px
+  }
+
+  .home-picture{
+    width: 40rem;
+    height: 30rem; 
+  }
+  .home-pictures {
+    flex-wrap: wrap;
+  }
+  .home-picture:hover {
+    transition-property: all;
+    transition-duration: 1s;
+    width: 30rem;
+  }
+  .home-picture nav a {
+    font-size: 40px;
+  }
+  .home-picture h3 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 700px) {
+  #home{
+    text-align: center;
+  }
+  #home h1 {
+    font-size: 40px;
+  }
+  #home h5 {
+    font-size: 20px
+  }
+
+  .home-picture{
+    width: 20rem;
+    height: 25rem; 
+  }
+  .home-pictures {
+    flex-wrap: wrap;
+  }
+  .home-picture:hover {
+    transition-property: all;
+    transition-duration: 1s;
+    width: 19rem;
+  }
+  .home-picture nav a {
+    font-size: 20px;
+  }
+  .home-picture h3 {
+    font-size: 17px;
+  }
+}
+  
+  
+
 
 #about{ 
   display:flex;
@@ -247,6 +324,24 @@ main {
   font-size: 1.3rem;
 }
 
+@media (max-width: 1200px) {
+  #about h2 {
+    font-size: 6rem;
+  }
+  #about p {
+    font-size: 2rem;
+  }
+ 
+}
+@media (max-width: 700px) {
+  #about h2 {
+    font-size: 6rem;
+  }
+  #about p {
+    font-size: 1.3rem;
+  }
+ 
+}
 
 
 #about h2 {
@@ -257,6 +352,8 @@ main {
   background-clip: text;
   color: transparent;
 }
+
+
 
 /*  
 #section {
@@ -337,7 +434,7 @@ main {
   color: transparent;
 }
 
-.products-info p{
+.adopciones-info p{
   font-size: 20px;
   font-weight: 800;
 }
@@ -366,6 +463,38 @@ main {
 .category:hover {
   color: #85888C;
   background-color: transparent;
+}
+
+
+@media (max-width: 1200px) {
+  .adopciones-info h2 {
+    font-size: 6rem;
+    text-align: center;
+  }
+  .adopciones-info p {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .category {
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+  }
+ 
+}
+
+@media (max-width: 700px) {
+  .adopciones-info h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .adopciones-info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .category {
+    font-size: 1rem;
+  }
+ 
 }
 
 
@@ -448,4 +577,19 @@ footer nav a{
 
 footer nav a:hover {
   color: #85888C;
+}
+
+@media (max-width: 1200px) {
+  
+  footer nav a {
+    font-size: 2rem;
+  }
+ 
+}
+
+@media (max-width: 700px) {
+  footer nav a {
+    font-size: 1rem;
+  }
+ 
 }
